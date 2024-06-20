@@ -1,0 +1,118 @@
+site_name: VisAPI Documentation
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: custom
+      toggle:
+        icon: material/toggle-switch
+        name: switch to dark mode
+    - scheme: slate
+      primary: custom
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: switch to light mode
+
+  features:
+    - navigation.tracking
+    #    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - toc.follow
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github-alt
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.blocks.tab:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+
+# repo
+repo_name: VisAPI
+repo_url: https://github.com/vanker-x/VisAPI
+
+nav:
+  - Overview: index.md
+  - Installation: installation.md
+  - Guide:
+      - guide/index.md
+      - Tutorial:
+          - guide/tutorial/index.md
+          - Application: guide/tutorial/application.md
+          - Callback: guide/tutorial/callback.md
+          - Configuration: guide/tutorial/configuration.md
+          - Routing:
+              - guide/tutorial/routing/index.md
+              - Router: guide/tutorial/routing/router.md
+              - Route: guide/tutorial/routing/route.md
+              - Convertor: guide/tutorial/routing/convertor.md
+          - Group: guide/tutorial/group.md
+          - Visualization: guide/tutorial/visualization.md
+          - Request: guide/tutorial/request.md
+          - Response: guide/tutorial/response.md
+          - Websocket: guide/tutorial/websocket.md
+      - Cakes:
+          - guide/cakes/index.md
+          - Specification:
+              - guide/cakes/specification/index.md
+              - WSGI: guide/cakes/specification/WSGI.md
+              - ASGI: guide/cakes/specification/ASGI.md
+              - RSGI: guide/cakes/specification/RSGI.md
+          - Sqlalchemy: guide/cakes/sqlalchemy.md
+          - Pydantic: guide/cakes/pydantic.md
+      - Deployment:
+          - guide/deployment/index.md
+          - granian: guide/deployment/granian.md
+          - uvicorn: guide/deployment/uvicorn.md
+  - Reference:
+      reference/index.md
+
+plugins:
+  - glightbox
+  - search
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: zh
+          name: 简体中文
+          build: true
+          site_name: VisAPI 中文文档
+          nav_translations:
+            Home: 序言
+            Guide: 指南
+            Reference: 参考
+            Routing: 路由系统
+            Router: 路由器
+            Route: 路由
+            Convertor: 路由转换器
+            Application: 应用
+            Callback: 回调
+            Configuration: 配置
+            Installation: 安装
+            Tutorial: 教程
+            Group: 组
+            Visualization: 可视化
+            Request: 请求
+            Response: 响应
+            Cakes: 一些小蛋糕🧁
+            Specification: 规格
+            Deployment: 部署
+
+
+extra_css:
+  - stylesheets/extra.css
